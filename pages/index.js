@@ -5,11 +5,10 @@ import { Footer, HeroSection, Header, Card } from "../components/index";
 const Home = () => {
   return (
     <div className="bg-[#1A1A1A]">
-      Hey
-      {/* <Header />
+      <Header />
       <HeroSection />
       <Card />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

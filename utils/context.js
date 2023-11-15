@@ -1,6 +1,6 @@
 import { BigNumber, ethers } from "ethers";
 import { contract, tokenContract } from "./contract";
-import { toEth, toWei } from "./utils";
+import { toEth, toWei as toWeiFromUtils } from "./utils";
 
 export async function swapEthToToken(tokenName, amount) {
   try {
@@ -17,7 +17,7 @@ export async function swapEthToToken(tokenName, amount) {
 
 export async function hasValidAllowance(owner, tokenName, amount) {
   try {
-    const contractObj = await contract;
+    const contractObj = await contract();
     const address = await contractObj.getTokenAddress(tokenName);
 
     const tokenContractObj = await tokenContract(address);
