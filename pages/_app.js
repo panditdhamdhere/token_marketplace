@@ -11,7 +11,7 @@ import {
   midnightTheme,
 } from "@rainbow-me/rainbowkit";
 
-import { Chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { infuraProvider } from "wagmi/providers/infura";
 
 const { chains, provider } = configureChains(
