@@ -3,7 +3,7 @@ import { Fragment, useRef, useState } from "react";
 import { Loading } from "@nextui-org/react";
 import { Dialog, Transition } from "@headlessui/react";
 
-export default TransactionStatus = ({}) => {
+const TransactionStatus = () => {
   const [open, setOpen] = useState(true);
 
   // To prevent closing of the dialog
@@ -60,3 +60,4 @@ export default TransactionStatus = ({}) => {
     </Transition.Root>
   );
 };
+export default TransactionStatus;
