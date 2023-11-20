@@ -195,12 +195,51 @@ const SwapComponent = () => {
   }
 
   function populateInputValue() {
-    if (destToken === DEFAULT_VALUE || srcToken === DEFAULT_VALUE  || !outputValue) return;
+    if (
+      destToken === DEFAULT_VALUE ||
+      srcToken === DEFAULT_VALUE ||
+      !outputValue
+    )
+      return;
     try {
-      if(srcToken !== ETH)
+      if (srcToken !== ETH && destToken !== ETH) setInputValue(setOutputValue);
+      else if (srcToken !== ETH && destToken !== ETH) {
+        const outValue = toEth(toWei(outputValue, 14));
+        setInputValue(outValue);
+      } else if (srcToken !== ETH || destToken === ETH) {
+        const outValue = toEth(toWei(outputValue, 14));
+        setInputValue(outValue);
+      }
     } catch (error) {
-      
-    } 
+      setInputValue("0");
+    }
+  }
+
+  async function performSwap() {
+    setTxPending(true);
+
+    let receipt;
+    if (srcToken === ETH && destToken !== ETH) {
+      receipt = await swapEthToToken(destToken, inputValue);
+    } else if (srcToken !== ETH && destToken === ETH) {
+      receipt = await swapTokenToEth(destToken, inputValue);
+    } else {
+      receipt = await swapTokenToToken(srcToken, destToken, inputValue);
+    }
+    txPending(false);
+
+    if (receipt && !receipt.hasOwnProperty("transactionHash")) {
+      notifyError(receipt);
+    } else {
+      notifySuccess();
+    }
+  }
+
+  function handleInsufficientAllowance() {
+    notifyError(
+      "Insufficient allowance. Click 'Increase Allowance' to increase it"
+    );
+    setSwapBtnText(INCREASE_ALLOWANCE);
   }
 };
 
