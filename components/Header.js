@@ -42,7 +42,7 @@ const Header = () => {
               <a
                 rel="noopener noreferrer"
                 href="/"
-                className="flex items-center px-4 -mb-1  dark:border-transparent text-[#7765F3] border-[#7765F3]"
+                className="flex items-center px-4 -mb-1  dark:border-transparent text-[#4fdd0d] border-[#7765F3]"
               >
                 Swap
               </a>

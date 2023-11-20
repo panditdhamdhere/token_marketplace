@@ -13,7 +13,7 @@ const HeroSection = () => {
         >
           <h1 className="text-5xl font-bold leadi sm:text-6xl">
             Token
-            {""} <span className="text-[#7765f3]">Marketplace</span>
+            {""} <span className="text-[#4fdd0d]">Marketplace</span>
           </h1>
           <p className="mt-6 mb-8 text-lg sm:mb-11 ">
             Swap, earn and build on the leading decentralized crypto trading
@@ -32,7 +32,7 @@ const HeroSection = () => {
             <a
               rel="noopener noreferrer"
               href="#"
-              className="px-8 py-3 text-lg font-semibold rounded bg-[#7765f3] text-gray-900 hover:bg-[#7765f3]/90"
+              className="px-8 py-3 text-lg font-semibold rounded bg-[#4fdd0d] text-gray-900 hover:bg-[#7765f3]/90"
             >
               Swap ERC-20
             </a>
