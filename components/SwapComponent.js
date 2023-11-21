@@ -18,8 +18,8 @@ import { useAccount } from "wagmi";
 const SwapComponent = () => {
   const [srcToken, setSrcToken] = useState(ETH);
   const [destToken, setDestToken] = useState(DEFAULT_VALUE);
-  const [inputValue, setInputValue] = useState();
-  const [outputValue, setOutputValue] = useState();
+  const [inputValue, setInputValue] = useState("");
+  const [outputValue, setOutputValue] = useState("");
 
   const inputValueRef = useRef();
   const outputValueRef = useRef();
