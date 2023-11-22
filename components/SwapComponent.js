@@ -29,6 +29,7 @@ const SwapComponent = () => {
   const INCREASE_ALLOWANCE = "Increase allowance";
   const ENTER_AMOUNT = "Enter amount";
   const CONNECT_WALLET = "Connect wallet";
+  const SWAP = "Swap";
   const srcTokenObj = {
     id: "srcToken",
     value: inputValue,
