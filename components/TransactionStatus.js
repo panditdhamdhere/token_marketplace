@@ -51,7 +51,7 @@ const TransactionStatus = () => {
                 <Loading>Completing the transaction...</Loading>
               </div>
               <p className="px-4 py-4 text-black items-center text-sm justify-center sm:px-6 sm:flex sm:flex-row-reverse ">
-                (Transaction would usualy tale &lt; 12 secs...)
+                (Transaction would usualy take &lt; 12 secs...)
               </p>
             </div>
           </Transition.Child>
