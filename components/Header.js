@@ -26,7 +26,7 @@ const Header = () => {
   }, [address]);
 
   return (
-    <header className="p-4 text-gray-100 ">
+    <header className="p-4 text-orange-500 ">
       <div className="container flex justify-between h-16 mx-auto ">
         <div className="flex ">
           <a
@@ -42,7 +42,7 @@ const Header = () => {
               <a
                 rel="noopener noreferrer"
                 href="/"
-                className="flex items-center px-4 -mb-1  dark:border-transparent text-[#4fdd0d] border-[#7765F3]"
+                className="flex items-center px-4 -mb-1  dark:border-transparent text-orange-500"
               >
                 Swap
               </a>

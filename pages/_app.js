@@ -18,7 +18,7 @@ const { chains, provider } = configureChains(
   [chain.polygonMumbai],
   [
     infuraProvider({
-      apiKey: "f0267a8d7d5642caa8735db53507eefd",
+      apiKey: "5eb0171f002f4cc7a4fa61e389b263d5",
       priority: 1,
     }),
   ]

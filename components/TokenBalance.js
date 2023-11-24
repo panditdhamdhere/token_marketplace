@@ -55,7 +55,7 @@ const TokenBalance = ({ name, walletAddress }) => {
           {balance}
         </p>
       </div>
-      <div className="flex items-center p-2 px-2 bg-[#4fdd0d] rounded-r-lg ">
+      <div className="flex items-center p-2 px-2 bg-orange-500 text-white rounded-r-lg ">
         <copyIcon.icon
           className="h-6 cursor-pointer"
           onClick={() => {
